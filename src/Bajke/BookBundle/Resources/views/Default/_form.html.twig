@@ -1,0 +1,11 @@
+{% extends create == 'true' ? 'BookBundle:Default:create.html.twig' : 'BookBundle:Default:update.html.twig' %}
+
+{% if create == 'false' %}
+    {% block book_id %}{{ book.id }}{% endblock %}
+{% endif %}
+
+{% block form %}
+
+    {{ dump(book) }}
+
+{% endblock %}

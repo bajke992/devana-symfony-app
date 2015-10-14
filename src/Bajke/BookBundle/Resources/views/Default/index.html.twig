@@ -1,1 +1,16 @@
-Hello {{ name }}!
+{% extends 'BookBundle::layout.html.twig' %}
+{% block title %} Books {% endblock %}
+{% block body %}
+    Hello !
+    <br />
+    <a href="/book/create" >Create</a>
+    <br />
+    <ul>
+    {% for book in books %}
+        <li>
+            {{ book.title }} | {{ book.description }} | <a href="/book/delete?id={{ book.id }}">(delete)</a> | <a href="/book/update?id={{ book.id }}">(update)</a>
+        </li>
+    {% endfor %}
+    </ul>
+    <hr />
+{% endblock %}
