@@ -3,7 +3,7 @@
 security:
     providers:
         hwi:
-            id: hwi_oauth.user.provider
+            id: user.oauth_user_provider
 
     firewalls:
         secured_area:
@@ -18,7 +18,7 @@ security:
                 login_path:        /login
                 failure_path:      /login
                 oauth_user_provider:
-                    service: hwi_oauth.user.provider
+                    service: user.oauth_user_provider
 
     access_control:
 #        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
