@@ -81,6 +81,12 @@ swiftmailer:
 
 monolog:
     handlers:
+        nested:
+            level: debug
+            type: stream
+            path: "php://stderr"
+            channels: ~
+
         security:
             level: debug
             type: stream
