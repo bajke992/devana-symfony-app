@@ -78,6 +78,14 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+	
+monolog:
+    handlers:
+        security:
+            level: debug
+            type: stream
+            path: "%kernel.logs_dir%/security.log"
+            channels: ~
 
 hwi_oauth:
     firewall_name: secured_area
