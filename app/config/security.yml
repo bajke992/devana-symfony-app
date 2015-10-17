@@ -3,7 +3,7 @@
 security:
     ac1:
         connection: default
-		
+
     encoders:
         Bajke\BookBundle\Entity\User:
             algorithm: sha1
