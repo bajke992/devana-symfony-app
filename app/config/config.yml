@@ -84,7 +84,7 @@ monolog:
         nested:
             level: debug
             type: stream
-            path: "php://stderr"
+            path: "php://stdout"
             channels: ~
 
         security:
