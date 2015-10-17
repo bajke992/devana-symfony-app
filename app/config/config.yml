@@ -81,17 +81,17 @@ swiftmailer:
 
 monolog:
     handlers:
-        nested:
-            level: debug
-            type: stream
-            path: "php://stdout"
-            channels: ~
-
-#        security:
+#        nested:
 #            level: debug
 #            type: stream
-#            path: "%kernel.logs_dir%/security.log"
+#            path: "php://stdout"
 #            channels: ~
+
+        security:
+            level: debug
+            type: stream
+            path: "%kernel.logs_dir%/security.log"
+            channels: ~
 
 hwi_oauth:
     firewall_name: secured_area
