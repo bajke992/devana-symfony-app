@@ -1,6 +1,19 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    ac1:
+        connection: default
+		
+    encoders:
+        Bajke\BookBundle\Entity\User:
+            algorithm: sha1
+            encode_as_base64: false
+            iterations: 1
+    role_hierarchy:
+        ROLE_USER: ROLE_USER
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: [ ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
     providers:
         hwi:
             id: user.oauth_user_provider
