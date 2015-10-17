@@ -75,7 +75,13 @@ class DefaultController extends Controller
         return $this->render('BookBundle:Default:login.html.twig');
     }
 
-
+	/**
+	 * @Route("/file")
+	 */
+	public function fileAction(){
+		$file = $this->get('kernel')->getRootDir()."/logs/security.log";
+		return new Response(file_get_contents($file), 200);
+	}
 
 
 
