@@ -6,12 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUser;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\EquatableInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
  *
+ * @Serializer\ExclusionPolicy("all")
  * @ORM\Table(name="user")
  * @ORM\Entity
  */
@@ -20,6 +22,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var integer
      *
+     * @Serializer\Expose
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -29,6 +32,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var string
      *
+     * @Serializer\Expose
      * @ORM\Column(name="google_id", type="string", length=255, unique=true, nullable=true)
      */
     private $googleId;
@@ -36,6 +40,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var string
      *
+     * @Serializer\Expose
      * @ORM\Column(type="string", unique=true)
      */
     protected $username;
@@ -43,6 +48,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var string
      *
+     * @Serializer\Expose
      * @ORM\Column(type="string", unique=true)
      */
     private $email;
@@ -50,6 +56,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var string
      *
+     * @Serializer\Expose
      * @ORM\Column(nullable=true)
      */
     private $realname;
@@ -57,6 +64,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var string
      *
+     * @Serializer\Expose
      * @ORM\Column(nullable=true)
      */
     private $nickname;
@@ -78,6 +86,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     /**
      * @var mixed
      *
+     * @Serializer\Expose
      * @ORM\OneToMany(targetEntity="Book", mappedBy="owner")
      */
     private $books;
