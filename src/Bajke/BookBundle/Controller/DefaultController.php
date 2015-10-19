@@ -18,9 +18,12 @@ class DefaultController extends Controller
      */
     public function indexAction(){
         $repo = $this->getDoctrine()->getRepository('BookBundle:User');
-        $tmp = $this->getUser();
 
-        $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        if($this->getUser()) {
+            $tmp = $this->getUser();
+            $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        }
+
         return array('user' => $user);
     }
 
@@ -42,9 +45,12 @@ class DefaultController extends Controller
      */
     public function profileAction(){
         $repo = $this->getDoctrine()->getRepository('BookBundle:User');
-        $tmp = $this->getUser();
 
-        $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        if($this->getUser()) {
+            $tmp = $this->getUser();
+            $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        }
+        
         return array('user' => $user);
     }
 
