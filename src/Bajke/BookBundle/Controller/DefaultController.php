@@ -17,11 +17,11 @@ class DefaultController extends Controller
      * @Template()
      */
     public function indexAction(){
-//        $em = $this->getDoctrine()->getManager();
-//        $books = $em->getRepository('BookBundle:Book')->findAll();
+        $repo = $this->getDoctrine()->getRepository('BookBundle:User');
+        $tmp = $this->getUser();
 
-//        return array('user' => $this->container->get('security.context')->getToken()->getUser());
-        return array('user' => $this->getUser());
+        $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        return array('user' => $user);
     }
 
 //    /**
@@ -41,10 +41,11 @@ class DefaultController extends Controller
      * @Template()
      */
     public function profileAction(){
-//        return new Response("asd", 200);
-//        echo var_dump($this->container->get('security.context')->getToken()->getUser());
-        echo var_dump($this->getUser());
-        die;
+        $repo = $this->getDoctrine()->getRepository('BookBundle:User');
+        $tmp = $this->getUser();
+
+        $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        return array('user' => $user);
     }
 
     /**
