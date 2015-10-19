@@ -17,24 +17,24 @@ class DefaultController extends Controller
      * @Template()
      */
     public function indexAction(){
-        $em = $this->getDoctrine()->getManager();
-        $books = $em->getRepository('BookBundle:Book')->findAll();
+//        $em = $this->getDoctrine()->getManager();
+//        $books = $em->getRepository('BookBundle:Book')->findAll();
 
 //        return array('user' => $this->container->get('security.context')->getToken()->getUser());
         return array('user' => $this->getUser());
     }
 
-    /**
-     * @Route("/welcome", name="welcome")
-     * @Template()
-     */
-    public function welcomeAction(){
-        if($this->getUser()){
-            return new RedirectResponse($this->generateUrl('profile'));
-        } else {
-            return new RedirectResponse($this->generateUrl('index'));
-        }
-    }
+//    /**
+//     * @Route("/welcome", name="welcome")
+//     * @Template()
+//     */
+//    public function welcomeAction(){
+//        if($this->getUser()){
+//            return new RedirectResponse($this->generateUrl('profile'));
+//        } else {
+//            return new RedirectResponse($this->generateUrl('index'));
+//        }
+//    }
 
     /**
      * @Route("/profile", name="profile")
