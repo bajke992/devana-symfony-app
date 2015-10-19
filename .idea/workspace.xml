@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5817b9c-1b46-41cd-8d9f-336fe7a1e7c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig" />
     </list>
     <ignored path="devana-symfony-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.46314102">
+              <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
               <folding>
                 <element signature="e#47#80#0#PHP" expanded="true" />
               </folding>
@@ -64,8 +64,8 @@
       <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
               <folding />
             </state>
           </provider>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2724359">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -153,9 +153,9 @@
         <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/profile.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig" />
         <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -911,14 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -927,21 +919,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
-          <folding>
-            <element signature="e#47#80#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2724359">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46314102">
+          <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
+          <folding>
+            <element signature="e#47#80#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -105,7 +105,7 @@ class DefaultController extends Controller
         $em->remove($book);
         $em->flush();
 
-        return $this->redirect('/');
+        return new RedirectResponse($this->generateUrl('book_list'));
     }
 
     /**
