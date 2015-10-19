@@ -17,8 +17,8 @@
                 <td>{{ book.title }}</td>
                 <td>{{ book.description }}</td>
                 <td>
-                    <a href="/book/update?id={{ book.id }}">(update)</a>
-                    <a href="/book/delete?id={{ book.id }}">(delete)</a>
+                    <a class="btn btn-info btn-xs" href="/book/update?id={{ book.id }}">update</a>
+                    <a class="btn btn-danger btn-xs" href="/book/delete?id={{ book.id }}">(delete)</a>
                 </td>
             </tr>
         {% endfor %}

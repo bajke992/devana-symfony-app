@@ -29,8 +29,8 @@ security:
             oauth:
                 resource_owners:
                     google: "/login/check-google"
-                login_path:        /login
-                failure_path:      /login
+                login_path: /login
+                failure_path: /login
                 default_target_path: /profile
                 oauth_user_provider:
                     service: user.oauth_user_provider

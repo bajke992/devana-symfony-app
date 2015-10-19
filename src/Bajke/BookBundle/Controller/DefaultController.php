@@ -49,6 +49,8 @@ class DefaultController extends Controller
         if($this->getUser()) {
             $tmp = $this->getUser();
             $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        } else {
+            return new RedirectResponse($this->generateUrl('index'));
         }
 
         return array('user' => $user);
