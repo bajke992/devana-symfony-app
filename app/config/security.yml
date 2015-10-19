@@ -36,5 +36,6 @@ security:
                     service: user.oauth_user_provider
 
     access_control:
-        - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/, roles: [ IS_AUTHENTICATED_FULLY, IS_AUTHENTICATED_ANONYMOUSLY ] }
+        - { path: ^/profile, roles: IS_AUTHENTICATED_FULLY }
 #        - { path: ^/api/book, roles: ROLE_OAUTH_USER }

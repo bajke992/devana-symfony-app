@@ -50,7 +50,7 @@ class DefaultController extends Controller
             $tmp = $this->getUser();
             $user = $repo->findOneBy(array('id' => $tmp->getId()));
         }
-        
+
         return array('user' => $user);
     }
 
