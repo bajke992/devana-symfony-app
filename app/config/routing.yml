@@ -9,6 +9,9 @@ hwi_oauth_login:
 google_login:
     pattern: /login/check-google
 
+logout:
+    path: /logout
+
 book:
     resource: "@BookBundle/Controller/"
     type:     annotation
