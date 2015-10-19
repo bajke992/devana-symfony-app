@@ -2,6 +2,9 @@
 {% block title %} Book list {% endblock %}
 
 {% block body %}
+    <div class="row">
+        <a class="btn btn-success" href="{{ path('book_create') }}">Create new</a>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -17,8 +20,8 @@
                 <td>{{ book.title }}</td>
                 <td>{{ book.description }}</td>
                 <td>
-                    <a class="btn btn-info btn-xs" href="/book/update?id={{ book.id }}">update</a>
-                    <a class="btn btn-danger btn-xs" href="/book/delete?id={{ book.id }}">(delete)</a>
+                    <a class="btn btn-info btn-xs" href="/book/update?id={{ book.id }}"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a class="btn btn-danger btn-xs" href="/book/delete?id={{ book.id }}"><span class="glyphicon glyphicon-pencil"></span></a>
                 </td>
             </tr>
         {% endfor %}

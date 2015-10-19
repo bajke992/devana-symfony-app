@@ -17,12 +17,7 @@ class DefaultController extends Controller
      * @Template()
      */
     public function indexAction(){
-        $repo = $this->getDoctrine()->getRepository('BookBundle:User');
-
-        if($this->getUser()) {
-            $tmp = $this->getUser();
-            $user = $repo->findOneBy(array('id' => $tmp->getId()));
-        }
+        $user = $this->checkUser();
 
         return array('user' => $user);
     }
@@ -44,14 +39,8 @@ class DefaultController extends Controller
      * @Template()
      */
     public function profileAction(){
-        $repo = $this->getDoctrine()->getRepository('BookBundle:User');
-
-        if($this->getUser()) {
-            $tmp = $this->getUser();
-            $user = $repo->findOneBy(array('id' => $tmp->getId()));
-        } else {
-            return new RedirectResponse($this->generateUrl('index'));
-        }
+        $user = $this->checkUser();
+        if(!$user){ return new RedirectResponse($this->generateUrl('index')); }
 
         return array('user' => $user);
     }
@@ -61,10 +50,13 @@ class DefaultController extends Controller
      * @Template()
      */
     public function listAction(){
-        $em = $this->getDoctrine()->getManager();
-        $books = $em->getRepository('BookBundle:Book')->findAll();
+        $user = $this->checkUser();
+        if(!$user){ return new RedirectResponse($this->generateUrl('index')); }
 
-        return array('books' => $books, 'user' => $this->getUser());
+//        $books = $em->getRepository('BookBundle:Book')->findAll();
+        $books = $user->getBooks();
+
+        return array('books' => $books, 'user' => $user);
     }
 
     /**
@@ -72,10 +64,13 @@ class DefaultController extends Controller
      * @Template("BookBundle:Default:_form.html.twig")
      */
     public function createAction(){
+        $user = $this->checkUser();
+        if(!$user){ return new RedirectResponse($this->generateUrl('index')); }
+
         $em = $this->getDoctrine()->getManager();
         $book = new Book();
 
-        return array('create' => true, 'book' => $book);
+        return array('create' => true, 'book' => $book, 'user' => $user);
     }
 
     /**
@@ -140,5 +135,18 @@ class DefaultController extends Controller
     public function helloAction($name)
     {
         return array('name' => $name);
+    }
+
+    protected function checkUser(){
+        $repo = $this->getDoctrine()->getRepository('BookBundle:User');
+
+        if($this->getUser()) {
+            $tmp = $this->getUser();
+            $user = $repo->findOneBy(array('id' => $tmp->getId()));
+        } else {
+            $user = null;
+        }
+
+        return $user;
     }
 }
