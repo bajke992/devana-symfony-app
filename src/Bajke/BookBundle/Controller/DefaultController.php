@@ -57,7 +57,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/book/create")
+     * @Route("/book/create", name="book_create")
      * @Template("BookBundle:Default:_form.html.twig")
      */
     public function createAction(){

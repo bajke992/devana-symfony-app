@@ -33,8 +33,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Books <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">List</a></li>
-                                <li><a href="#">Create</a></li>
+                                <li><a href="{{ path('book_list') }}">List</a></li>
+                                <li><a href="{{ path('book_create') }}">Create</a></li>
                             </ul>
                         </li>
                     {% endif %}
@@ -43,7 +43,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             {% if user is defined and user is not null %}
-                                Username
+                                {{ user.realname }}
                             {% else %}
                                 Sign in
                             {% endif %}
@@ -52,10 +52,10 @@
                         <ul class="dropdown-menu">
                             {% if user is defined and user is not null %}
                                 <li>
-                                    <a href="#">Profile</a>
+                                    <a href="{{ path('profile') }}">Profile</a>
                                 </li>
                                 <li>
-                                    <a href="#">Logout</a>
+                                    <a href="/logout">Logout</a>
                                 </li>
                             {% else %}
                                 <li>
