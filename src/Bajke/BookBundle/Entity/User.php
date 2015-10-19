@@ -221,7 +221,7 @@ class User extends OAuthUser implements EquatableInterface, \Serializable
     }
 
     public function getRoles() {
-        return array('USER_ROLE');
+        return array('ROLE_USER');
     }
 
     public function eraseCredentials() {
