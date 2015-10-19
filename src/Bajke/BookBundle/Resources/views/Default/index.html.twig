@@ -1,16 +1,26 @@
 {% extends 'BookBundle::layout.html.twig' %}
 {% block title %} Books {% endblock %}
+
+{#{% block login %}#}
+    {#{% if user is not null %}#}
+        {#<a href="/logout">Logout</a>#}
+    {#{% else %}#}
+        {#<a href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}" >Login with Google</a>#}
+    {#{% endif %}#}
+
+{#{% endblock %}#}
+
 {% block body %}
-    Hello !
-    <br />
-    <a href="/book/create" >Create</a>
-    <br />
-    <ul>
-    {% for book in books %}
-        <li>
-            {{ book.title }} | {{ book.description }} | <a href="/book/delete?id={{ book.id }}">(delete)</a> | <a href="/book/update?id={{ book.id }}">(update)</a>
-        </li>
-    {% endfor %}
-    </ul>
-    <hr />
+    {#<br />#}
+    {#<a href="/book/create" >Create</a>#}
+    {#<br />#}
+    {#<ul>#}
+    {#{% for book in books %}#}
+        {#<li>#}
+            {#{{ book.title }} | {{ book.description }} | <a href="/book/delete?id={{ book.id }}">(delete)</a> | <a href="/book/update?id={{ book.id }}">(update)</a>#}
+        {#</li>#}
+    {#{% endfor %}#}
+    {#</ul>#}
+    {#<hr />#}
+    asd
 {% endblock %}

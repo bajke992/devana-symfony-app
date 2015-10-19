@@ -11,12 +11,16 @@ class BookType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
             ->add('title', 'text')
-            ->add('description', 'textarea');
+            ->add('description', 'textarea')
+            ->add('owner', 'textarea', [
+                'disabled' => $options['is_edit']
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults([
             'data_class' => 'Bajke\BookBundle\Entity\Book',
+            'is_edit' => false,
         ]);
     }
 

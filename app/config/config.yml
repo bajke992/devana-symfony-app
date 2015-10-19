@@ -40,7 +40,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ 'BookBundle' ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -81,11 +81,11 @@ swiftmailer:
 
 monolog:
     handlers:
-        nested:
-            level: debug
-            type: stream
-            path: "php://stderr"
-            channels: ~
+#        nested:
+#            level: debug
+#            type: stream
+#            path: "php://stderr"
+#            channels: ~
         security:
             level: debug
             type: stream

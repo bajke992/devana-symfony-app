@@ -6,20 +6,54 @@ use Bajke\BookBundle\Entity\Book;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="index")
      * @Template()
      */
     public function indexAction(){
         $em = $this->getDoctrine()->getManager();
         $books = $em->getRepository('BookBundle:Book')->findAll();
 
-        return array('books' => $books);
+        return array('books' => $books, 'user' => $this->getUser());
+    }
+
+    /**
+     * @Route("/welcome", name="welcome")
+     * @Template()
+     */
+    public function welcomeAction(){
+        if($this->getUser()){
+            return new RedirectResponse($this->generateUrl('profile'));
+        } else {
+            return new RedirectResponse($this->generateUrl('index'));
+        }
+    }
+
+    /**
+     * @Route("/profile", name="profile")
+     * @Template()
+     */
+    public function profileAction(){
+//        return new Response("asd", 200);
+        echo var_dump($this->getUser());
+        die;
+    }
+
+    /**
+     * @Route("/book", name="book_list")
+     * @Template()
+     */
+    public function listAction(){
+        $em = $this->getDoctrine()->getManager();
+        $books = $em->getRepository('BookBundle:Book')->findAll();
+
+        return array('books' => $books, 'user' => $this->getUser());
     }
 
     /**
