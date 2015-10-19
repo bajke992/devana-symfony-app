@@ -22,7 +22,7 @@
                     {#{{ book.description }}#}
                     {% set desc = book.description | split(' ', 16) %}
                     {% for i in 0..14 %}
-                        i
+                        {{ i }}
                     {% endfor %}
                     ,...
                 </td>
