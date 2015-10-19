@@ -20,7 +20,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $books = $em->getRepository('BookBundle:Book')->findAll();
 
-        return array('books' => $books, 'user' => $this->getUser());
+        return array('user' => $this->container->get('security.context')->getToken()->getUser());
     }
 
     /**
@@ -41,7 +41,7 @@ class DefaultController extends Controller
      */
     public function profileAction(){
 //        return new Response("asd", 200);
-        echo var_dump($this->getUser());
+        echo var_dump($this->container->get('security.context')->getToken()->getUser());
         die;
     }
 
