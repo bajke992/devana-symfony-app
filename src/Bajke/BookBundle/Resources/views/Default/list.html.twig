@@ -18,7 +18,14 @@
             <tr>
                 <td>{{ book.id }}</td>
                 <td>{{ book.title }}</td>
-                <td>{{ book.description }}</td>
+                <td>
+                    {#{{ book.description }}#}
+                    {% set desc = book.description | split(' ', 16) %}
+                    {% for i in 0..14 %}
+                        i
+                    {% endfor %}
+                    ,...
+                </td>
                 <td>
                     <a class="btn btn-info btn-xs" href="/book/update?id={{ book.id }}"><span class="glyphicon glyphicon-remove"></span></a>
                     <a class="btn btn-danger btn-xs" href="/book/delete?id={{ book.id }}"><span class="glyphicon glyphicon-pencil"></span></a>
