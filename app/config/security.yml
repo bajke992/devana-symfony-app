@@ -38,4 +38,7 @@ security:
     access_control:
         - { path: ^/, roles: [ IS_AUTHENTICATED_FULLY, IS_AUTHENTICATED_ANONYMOUSLY ] }
         - { path: ^/profile, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/book, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/book/create, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/book/update, roles: IS_AUTHENTICATED_FULLY }
 #        - { path: ^/api/book, roles: ROLE_OAUTH_USER }

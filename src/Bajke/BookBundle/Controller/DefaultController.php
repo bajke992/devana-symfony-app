@@ -78,6 +78,9 @@ class DefaultController extends Controller
      * @Template("BookBundle:Default:_form.html.twig")
      */
     public function updateAction(Request $request){
+        $user = $this->checkUser();
+        if(!$user){ return new RedirectResponse($this->generateUrl('index')); }
+
         $em = $this->getDoctrine()->getManager();
         $id = $request->get("id");
         $book = $em->getRepository('BookBundle:Book')->find($id);
@@ -86,7 +89,7 @@ class DefaultController extends Controller
             throw $this->createNotFoundException('No Book fount for id: ' . $id);
         }
 
-        return array('create' => false, 'book' => $book);
+        return array('create' => false, 'book' => $book, 'user' => $user);
     }
 
     /**
