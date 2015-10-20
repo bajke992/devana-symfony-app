@@ -78,8 +78,8 @@ class DefaultController extends Controller
         if($form->isSubmitted() && $form->isValid()){
             $data = $form->getData();
 
-            $book->setTitle($data['title']);
-            $book->setDescription($data['description']);
+            $book->setTitle($data->getTitle());
+            $book->setDescription($data->getDescription());
             $book->getOwner($user->getId());
 
             $em->persist($book);
@@ -113,8 +113,8 @@ class DefaultController extends Controller
         if($form->isSubmitted() && $form->isValid()){
             $data = $form->getData();
 
-            $book->setTitle($data['title']);
-            $book->setDescription($data['description']);
+            $book->setTitle($data->getTitle());
+            $book->setDescription($data->getDescription());
 
             $em->flush();
 
