@@ -64,7 +64,7 @@ class DefaultController extends Controller
      * @Route("/book/create", name="book_create")
      * @Template("BookBundle:Default:_form.html.twig")
      */
-    public function createAction(){
+    public function createAction(Request $request){
         $user = $this->checkUser();
         if(!$user){ return new RedirectResponse($this->generateUrl('index')); }
 
@@ -74,7 +74,14 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_owner_disabled' => true));
 
-        if($form->isValid()){
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+
+            $book->setTitle($data['title']);
+            $book->setDescription($data['description']);
+            $book->getOwner($user->getId());
+
             $em->persist($book);
             $em->flush();
 
@@ -102,7 +109,13 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
 
-        if($form->isValid()){
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+
+            $book->setTitle($data['title']);
+            $book->setDescription($data['description']);
+
             $em->flush();
 
             return new RedirectResponse($this->generateUrl('book_list'));
