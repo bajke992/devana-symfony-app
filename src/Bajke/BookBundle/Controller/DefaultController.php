@@ -95,7 +95,7 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
 
-        return array('create' => false, 'book' => $book, 'user' => $user);
+        return array('create' => false, 'book' => $book, 'user' => $user, 'form' => $form->createView());
     }
 
     /**
