@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5817b9c-1b46-41cd-8d9f-336fe7a1e7c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Form/BookType.php" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Form/BookType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="devana-symfony-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,8 +101,8 @@
       <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40865386">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.5176282">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -638,7 +636,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
+            <element signature="e#43#75#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -716,7 +714,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
+            <element signature="e#43#75#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,7 +797,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
           <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
+            <element signature="e#43#75#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -910,7 +908,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
+            <element signature="e#43#75#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1029,8 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40865386">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.5176282">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
           <folding />
         </state>
       </provider>
