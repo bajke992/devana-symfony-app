@@ -74,6 +74,13 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_owner_disabled' => true));
 
+        if($form->isValid() && $form->get('save')->isClicked()){
+            $em->persist($book);
+            $em->flush();
+
+            return new RedirectResponse($this->generateUrl('book_list'));
+        }
+
         return array('create' => true, 'book' => $book, 'user' => $user, 'form' => $form->createView());
     }
 
@@ -94,6 +101,12 @@ class DefaultController extends Controller
         }
 
         $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
+
+        if($form->isValid() && $form->get('save')->isClicked()){
+            $em->flush();
+
+            return new RedirectResponse($this->generateUrl('book_list'));
+        }
 
         return array('create' => false, 'book' => $book, 'user' => $user, 'form' => $form->createView());
     }
