@@ -74,7 +74,7 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_owner_disabled' => true));
 
-        if($form->isValid() && $form->get('save')->isClicked()){
+        if($form->isValid()){
             $em->persist($book);
             $em->flush();
 
@@ -102,7 +102,7 @@ class DefaultController extends Controller
 
         $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
 
-        if($form->isValid() && $form->get('save')->isClicked()){
+        if($form->isValid()){
             $em->flush();
 
             return new RedirectResponse($this->generateUrl('book_list'));
