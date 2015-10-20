@@ -7,7 +7,17 @@
 {% block form %}
 
     {{ form_start(form) }}
-    {{ form_widget(form) }}
+
+        {{ form_errors(form) }}
+
+        {{ form_row(form.title) }}
+        {{ form_errors(form.title) }}
+
+        {{ form_row(form.description) }}
+        {{ form_errors(form.description) }}
+
+        {{ form_row(form.save) }}
+
     {{ form_end(form) }}
 
 {% endblock %}
