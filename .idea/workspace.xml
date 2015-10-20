@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e5817b9c-1b46-41cd-8d9f-336fe7a1e7c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" afterPath="$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="devana-symfony-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,8 +101,8 @@
       <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7083333">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.57211536">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -1028,8 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7083333">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.57211536">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding />
         </state>
       </provider>
