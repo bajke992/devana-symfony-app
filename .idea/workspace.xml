@@ -101,8 +101,8 @@
       <file leaf-file-name="_form.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57211536">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.599359">
+              <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
               <folding />
             </state>
           </provider>
@@ -1027,8 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bajke/BookBundle/Resources/views/Default/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57211536">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.599359">
+          <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
           <folding />
         </state>
       </provider>
