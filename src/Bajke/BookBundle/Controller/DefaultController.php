@@ -70,7 +70,7 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $book = new Book();
-        $book->getOwner($user->getId());
+//        $book->setOwner($user->getId());
 
         $form = $this->createForm(new BookType(), $book, array('is_owner_disabled' => true));
 
@@ -80,7 +80,7 @@ class DefaultController extends Controller
 
             $book->setTitle($data->getTitle());
             $book->setDescription($data->getDescription());
-            $book->getOwner($user->getId());
+            $book->setOwner($user->getId());
 
             $em->persist($book);
             $em->flush();
