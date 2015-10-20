@@ -6,6 +6,8 @@
 
 {% block form %}
 
-    book form here
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 
 {% endblock %}

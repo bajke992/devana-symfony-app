@@ -107,7 +107,7 @@ class ApiController extends BaseController {
             );
         }
 
-        $form = $this->createForm(new BookType(), $book, array('is_edit' => true));
+        $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
         $this->processForm($request, $form);
 
         $em = $this->getDoctrine()->getManager();

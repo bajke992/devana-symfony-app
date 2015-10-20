@@ -3,6 +3,7 @@
 namespace Bajke\BookBundle\Controller;
 
 use Bajke\BookBundle\Entity\Book;
+use Bajke\BookBundle\Form\BookType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -69,8 +70,11 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $book = new Book();
+        $book->getOwner($user->getId());
 
-        return array('create' => true, 'book' => $book, 'user' => $user);
+        $form = $this->createForm(new BookType(), $book, array('is_owner_disabled' => true));
+
+        return array('create' => true, 'book' => $book, 'user' => $user, 'form' => $form->createView());
     }
 
     /**
@@ -88,6 +92,8 @@ class DefaultController extends Controller
         if(!$book){
             throw $this->createNotFoundException('No Book fount for id: ' . $id);
         }
+
+        $form = $this->createForm(new BookType(), $book, array('is_edit' => true, 'is_owner_disabled' => true));
 
         return array('create' => false, 'book' => $book, 'user' => $user);
     }

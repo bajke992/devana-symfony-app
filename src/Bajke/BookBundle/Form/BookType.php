@@ -13,7 +13,7 @@ class BookType extends AbstractType {
             ->add('title', 'text')
             ->add('description', 'textarea')
             ->add('owner', 'textarea', [
-                'disabled' => $options['is_edit']
+                'disabled' => ($options['is_edit'] || $options['is_owner_disabled'])
             ]);
     }
 
@@ -21,6 +21,7 @@ class BookType extends AbstractType {
         $resolver->setDefaults([
             'data_class' => 'Bajke\BookBundle\Entity\Book',
             'is_edit' => false,
+            'is_owner_disabled' => false,
         ]);
     }
 
